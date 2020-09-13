@@ -33,6 +33,12 @@ async function main() {
   scrapeFlat('https://www.pisos.com/alquiler/pisos-almeria_capital/con-2-habitaciones/desde-350/hasta-500/fecharecientedesde-desc');
 }
 
+// Get
 app.get('/', (req, res) => {
   main();
 });
+
+// Server listening
+const port = process.env.PORT || 8080;
+app.listen(port,
+  () => console.log(`Server listening on port ${port}`));

@@ -18,7 +18,7 @@ async function scrapeFlat(url) {
 // Open the browser
 async function launchBrowser() {
   browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     // args needed by heroku-puppeteer buildpack
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
